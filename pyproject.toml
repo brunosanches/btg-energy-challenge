@@ -2,10 +2,11 @@
 name = "btg-energy-challenge"
 version = "0.1.0"
 description = ""
-authors = ["Candidato <Candidato@acme.com>"]
+authors = ["Bruno Macedo Sanches <bruno.macedosanches@outlook.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+matplotlib = "^3.8.2"
 
 [tool.poetry.dev-dependencies]
 pandas = "2.0.3"
