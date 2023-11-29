@@ -74,3 +74,17 @@ Pluviosidade por dia em cada ponto dentro da Bacia do Rio Grande
 
 ![](pluviosidade_graficos.png)
 Gráficos de Pluviosidade por dia e acumulada
+
+## Descrição do algoritmo
+O algoritmo para verificar se um ponto está dentro do contorno pode ser dividido em alguns passos:
+
+1. Elimina os pontos que não estão no retângulo que engloba o contorno: 
+    - Verifica se um ponto possui um valor de y acima do máximo ou abaixo do mínimo de todos os pontos do contorno.
+2. Para cada ponto, verifica a quantidade de vezes que uma linha do ponto ao infinito intersecta o contorno (se um número impar de vezes, então está dentro)
+    - Para cada ponto, examina a quantidade de vezes que uma linha do ponto ao infinito intersecta o contorno.
+    - Utiliza uma linha reta que conecta o ponto ao infinito para esse propósito.
+    - Desconsidera segmentos cujos valores de y nos extremos não "englobam" o valor de y do ponto.
+    - A linha se estende à direita do ponto, eliminando a necessidade de considerar segmentos à esquerda do ponto.
+    - Se segmento horizontal: Contabiliza a interseção apenas se o segmento horizontal é intersectado e os pontos extremos dos segmentos anterior e posterior ao segmento horizontal estão do mesmo lado do contorno.
+    - Se a linha infinita intersecta um dos extremos do segmento, conta a interseção somente se esse extremo for o "p1" do segmento.
+    - Caso contrário, a linha intersecta o segmento no meio, a interseção é contabilizada.
