@@ -44,3 +44,33 @@ apresente graficamente a resposta para a pergunta.
 ### Resalvas
 - É permitido a utilização de bibliotecas extras
 - A entrega do desafio deve ser feita por GIT. Responda o email com o link do seu repositório.
+
+### Execução
+Para instalar as dependências do código:
+
+```poetry install```
+
+O código pode ser executado com 
+```poetry run python main.py```
+
+### Resultados
+Pluviosidade por dia
+| Dia                    | Pluviosidade (mm) |
+|------------------------|-------------------|
+| 2021-12-02             | 10.8              |
+| 2021-12-03             | 45.2              |
+| 2021-12-04             | 7.2               |
+| 2021-12-05             | 38.2              |
+| 2021-12-06             | 80.4              |
+| 2021-12-07             | 11.9              |
+| 2021-12-08             | 95.2              |
+| 2021-12-09             | 95.3              |
+| 2021-12-10             | 218.4             |
+| 2021-12-11             | 5.6               |
+| **Total Acumulado**    | 608.2             |
+
+![](pluviosidade_geo.png)
+Pluviosidade por dia em cada ponto dentro da Bacia do Rio Grande
+
+![](pluviosidade_graficos.png)
+Gráficos de Pluviosidade por dia e acumulada
